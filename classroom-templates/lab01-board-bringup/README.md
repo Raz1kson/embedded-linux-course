@@ -456,11 +456,11 @@ Do not commit images, executables, toolchains, or kernel build output.
 ## 17. Success checklist
 
 ```text
-[ ] Correct official image downloaded and checksum verified
-[ ] BBB boots from microSD
-[ ] Serial console works
-[ ] USB networking and SSH work
-[ ] ARM user-space program runs on BBB
-[ ] Kernel tree builds on HOST
-[ ] HOST and BBB full kernel releases match before Lab 02
+[-] Correct official image downloaded and checksum verified
+[-] BBB boots from microSD
+[-] Serial console works
+[-] USB networking and SSH work
+[-] ARM user-space program runs on BBB
+[-] Kernel tree builds on HOST
+[-] HOST and BBB full kernel releases match before Lab 02
 ```
