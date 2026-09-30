@@ -94,28 +94,28 @@ Hello from Lab 01 on BeagleBone Black!
 
 ```text
 total 35M
--rw-rw-r-- 1 vboxuser vboxuser 177K Sep 25 13:28 6.12.109-bone72-dtbs.tar.zst
--rw-rw-r-- 1 vboxuser vboxuser  26M Sep 25 13:28 6.12.109-bone72-modules.tar.zst
--rwxrwxr-x 1 vboxuser vboxuser 8.4M Sep 25 13:27 6.12.109-bone72.zImage
--rw-rw-r-- 1 vboxuser vboxuser 206K Sep 25 13:27 config-6.12.109-bone72
+-rw-rw-r-- 1 vboxuser vboxuser 176K Sep 30 19:11 6.12.96-bone64-dtbs.tar.zst
+-rw-rw-r-- 1 vboxuser vboxuser  27M Sep 30 19:11 6.12.96-bone64-modules.tar.zst
+-rwxrwxr-x 1 vboxuser vboxuser 8.3M Sep 30 19:09 6.12.96-bone64.zImage
+-rw-rw-r-- 1 vboxuser vboxuser 206K Sep 30 19:09 config-6.12.96-bone64
 ```
 
 ### HOST: `cat ~/bbb-workspace/kernel/bb-kernel/KERNEL/include/config/kernel.release`
 
 ```text
-6.12.109-bone72
+6.12.96-bone64
 ```
 
 Do the full HOST and BBB kernel-release strings match exactly?
 
 ```text
-Ні, рядки не збігаються. На хості скомпільовано 6.12.109-bone72, тоді як на платі працює 6.12.96-bone64.
+Так, версії повністю ідентичні
 ```
 
 Why must Lab 02 use a matching kernel tree?
 
 ```text
-Для збірки зовнішніх модулів ядра потрібно мати точні заголовки того ядра, що запущене на платі.
+Для збірки зовнішніх модулів ядра потрібно мати точні заголовки того ядра, що запущене на платі. Якщо вони не збігаються при спробі завантаження модуля ядра з високою вірогідністю процес завершиться з помилкою "Invalid module format" або "Exec format error"
 ```
 
 Submit this completed report with `src/hello.c` and `Makefile`. Do not commit
